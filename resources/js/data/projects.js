@@ -5,7 +5,7 @@ const projects = [
             "Personal page summarizing experience, education, skills and current portfolio ",
         tech_stack: "HTML5, CSS3, Sass, JS, React, Laravel, Mailtrap.io",
         page_url: "https://www.ekaterinamelnichuk.com/",
-        source_code: "https://github.com/ekatamel/portfolio.git",
+        source_code: "https://github.com/ekatamel/PortfolioPage",
         project_img: "/img/projects/portfolio.png",
         name_color: "#365673",
         gradient_color: "#97cee977",
