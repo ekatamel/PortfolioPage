@@ -1,0 +1,669 @@
+// MOBILE FIRST
+
+// SMALLEST SCREENS
+@media all and (min-width: 0px) {
+    .hero-banner {
+        &__title {
+            font-size: calc(2rem + 1vw);
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: calc(1rem + 1vw);
+        }
+    }
+
+    .navigation {
+        &__links {
+            display: none;
+        }
+    }
+
+    .title {
+        font-size: calc(1rem + 2vw);
+    }
+
+    .introduction {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__info {
+            max-width: 85%;
+        }
+
+        &__text {
+            font-size: calc(0.9rem + 1vw);
+        }
+    }
+
+    .timeline {
+        &__container {
+            gap: 0em;
+            //   justify-content: flex-start;
+        }
+
+        &__content {
+            width: 90%;
+        }
+
+        &__list {
+            flex-direction: column;
+            border-left: 8px solid $prussian-blue;
+        }
+
+        &__item {
+            margin: 20px 0 20px -62px;
+
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+
+            &--active {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__desc {
+            &--active {
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+
+        &__text {
+            font-size: calc(0.8rem + 1vw);
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+
+    .education {
+        &__description {
+            font-size: calc(0.9rem + 1vw);
+        }
+
+        &__certificate-url {
+            display: none;
+        }
+
+        &__tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__name {
+            margin-top: 1em;
+        }
+
+        &__info {
+            padding: 0 0.5rem 0 0.5rem;
+        }
+
+        &__course {
+            &.active {
+                .education__info-container {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        padding: 4em 3em;
+        &__intro {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            display: none;
+        }
+
+        &__name {
+            font-size: 1.2rem;
+        }
+
+        &__intro {
+            font-size: calc(0.9rem + 1vw);
+            text-align: center;
+        }
+
+        &__carousel {
+            display: block;
+            width: 230px;
+            height: 144px;
+
+            img {
+                width: 230px;
+                height: 144px;
+            }
+        }
+    }
+
+    .about {
+        font-size: calc(0.9rem + 1vw);
+
+        &__container {
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        &__form {
+            display: none;
+        }
+
+        // &__form {
+        //   margin: auto;
+        //   width: 80%;
+        // }
+
+        &__info {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        textarea {
+            resize: none;
+            height: calc(6rem + 7vw);
+        }
+    }
+
+    .footer {
+        margin-top: 0px;
+        // padding-top: 3em;
+        height: 30vh;
+    }
+}
+
+// MOBILE SCREENS
+@media all and (min-width: 320px) {
+    .timeline {
+        &__container {
+            gap: 1em;
+            //   justify-content: flex-start;
+        }
+    }
+
+    // .timeline {
+    //   // &__text {
+    //   //   font-size: calc(0.8rem + 1vw);
+    //   // }
+
+    // }
+}
+
+// TABLETS
+@media all and (min-width: 481px) {
+    .hero-banner {
+        &__title {
+            font-size: calc(2rem + 2vw);
+            opacity: 0;
+            transition: opacity 1s ease 0.5s;
+
+            &--styled {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: white;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+
+                &:hover:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+
+        &__subtitle {
+            font-size: calc(1rem + 2vw);
+            visibility: hidden;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: 0.15em solid transparent; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: 0.15em; /* Adjust as needed */
+            animation: typing 2.5s steps(40, end) both,
+                blink-caret 0.75s step-end 4;
+            animation-delay: 2s;
+        }
+    }
+
+    .title {
+        font-size: calc(1rem + 3vw);
+    }
+
+    .timeline {
+        &__container {
+            gap: 1em;
+            //   justify-content: flex-start;
+        }
+
+        &__img {
+            display: block;
+            width: 250px;
+            height: 166px;
+        }
+
+        &__list {
+            min-height: 610px;
+        }
+    }
+
+    .portfolio {
+        padding: 4em 6em;
+
+        &__carousel {
+            display: block;
+            width: 300px;
+            height: 187px;
+
+            img {
+                width: 300px;
+                height: 187px;
+            }
+        }
+    }
+
+    .about {
+        &__form {
+            display: block;
+            margin: auto;
+            width: 80%;
+        }
+    }
+
+    .footer {
+        margin-top: -240px;
+        height: 50vh;
+        padding-top: 10em;
+    }
+}
+
+// SMALL DESKTOP SCREENS
+@media all and (min-width: 769px) {
+    .hero-banner {
+        &__title {
+            font-size: calc(2rem + 3vw);
+        }
+    }
+
+    .title {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .introduction {
+        &__container {
+            gap: 3em;
+            flex-direction: row;
+        }
+
+        &__info {
+            max-width: 45%;
+        }
+
+        &__text {
+            font-size: calc(0.7rem + 1vw);
+        }
+    }
+
+    .timeline {
+        &__container {
+            flex-direction: column;
+        }
+        &__list {
+            flex-direction: row;
+            min-height: fit-content;
+            border-bottom: 10px solid $prussian-blue;
+            border-left: none;
+            padding-left: 60px;
+            width: 100%;
+        }
+
+        &__item {
+            margin-bottom: -45px;
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+
+            &--active {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        &__desc {
+            &--active {
+                flex-direction: row;
+                gap: 2em;
+            }
+        }
+
+        &__container {
+            gap: 7em;
+        }
+
+        &__content {
+            width: 50%;
+        }
+
+        &__text {
+            font-size: calc(0.6rem + 1vw);
+        }
+
+        &__img {
+            display: block;
+            width: 300px;
+            height: 200px;
+        }
+    }
+
+    .education {
+        &__list {
+            font-size: calc(0.4rem + 1vw);
+        }
+
+        &__description {
+            // margin-top: 0;
+            font-size: calc(0.4rem + 1vw);
+            // flex-basis: 70px;
+        }
+
+        &__list {
+            display: block;
+        }
+
+        &__img {
+            min-width: 300px;
+            display: block;
+        }
+
+        &__certificate-url {
+            display: block;
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 2em;
+        }
+
+        // &__certificate-img {
+
+        // }
+
+        &__course {
+            &.active {
+                .education__info-container {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        &__name {
+            font-size: 1.5rem;
+        }
+
+        &__carousel {
+            width: 400px;
+            height: 250px;
+
+            img {
+                width: 400px;
+                height: 250px;
+            }
+        }
+    }
+
+    .about {
+        font-size: calc(0.5rem + 1vw);
+
+        textarea {
+            resize: none;
+            height: calc(10rem + 7vw);
+        }
+    }
+}
+
+// LARGE DESKTOP SCREENS
+@media all and (min-width: 1025px) {
+    .hero-banner {
+        &__title {
+            font-size: calc(2rem + 4vw);
+        }
+    }
+
+    .title {
+        font-size: calc(2rem + 2vw);
+    }
+
+    .education {
+        &__course {
+            margin-left: $width__tabs-side;
+            min-height: 0;
+            &.active {
+                .education__info {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        &__nav {
+            width: $width__tabs-side;
+            display: block;
+            float: left;
+            li {
+                margin-bottom: 2px;
+                display: block;
+                a {
+                    display: block;
+                }
+            }
+        }
+
+        &__tab {
+            display: none;
+        }
+
+        &__info {
+            padding: 2em;
+        }
+
+        &__name {
+            margin-top: 0;
+        }
+
+        &__course {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .portfolio {
+        &__container {
+            flex-direction: row;
+            justify-content: center;
+            display: flex;
+        }
+
+        &__carousel {
+            display: none;
+        }
+    }
+
+    .timeline {
+        &__img {
+            display: block;
+            width: 400px;
+            height: 266px;
+        }
+
+        &__desc {
+            &--active {
+                gap: 3em;
+            }
+        }
+    }
+
+    .about {
+        &__container {
+            flex-direction: row;
+        }
+
+        &__form {
+            // margin: auto;
+            width: 55%;
+        }
+
+        &__info {
+            width: 40%;
+        }
+    }
+}
+
+// ADDITIONAL
+
+@media all and (max-width: 500px) {
+    .skills {
+        &__card {
+            width: 200px;
+            height: 260px;
+            padding: 1em 1em;
+            justify-content: center;
+            margin-left: 1.55em;
+            // margin: auto;
+            &:hover {
+                box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.14),
+                    0 3px 10px 8px rgba(0, 0, 0, 0.12),
+                    0 17px 8px -7px rgba(0, 0, 0, 0.2);
+            }
+
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__carousel {
+            width: 315px;
+            margin: auto;
+
+            .carousel-container {
+                padding: 2.4em 1.6em;
+                width: 300px;
+                margin: auto;
+            }
+        }
+
+        &__name {
+            margin: 0;
+        }
+
+        &__logo {
+            width: 50px;
+            margin-left: 1em;
+            margin: 0;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+        }
+
+        &__list {
+            // gap: 0.3em;
+            font-size: 0.9em;
+        }
+
+        &__item {
+            padding: 3px;
+        }
+
+        &__toolcard {
+            width: 200px;
+            height: 53px;
+            margin-left: 1.55em;
+            &:hover {
+                box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.14),
+                    0 3px 10px 8px rgba(0, 0, 0, 0.12),
+                    0 17px 8px -7px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &__toollogo {
+            width: 30px;
+        }
+
+        &__toolname {
+            font-size: 1rem;
+        }
+
+        // .react-multiple-carousel__arrow::before {
+        //     font-size: 0.rem;
+        // }
+
+        .react-multiple-carousel__arrow {
+            width: 15px;
+            height: 15px;
+
+            &--right {
+                margin-right: -0.6em;
+            }
+
+            &--left {
+                margin-left: -0.5em;
+            }
+        }
+
+        &__filters {
+            gap: 0.5em;
+        }
+
+        &__filter {
+            width: 110px;
+            font-size: 0.9rem;
+            padding: 0.4em;
+        }
+    }
+}
+
+@media all and (min-width: 900px) {
+    .navigation {
+        &__links {
+            flex-direction: row;
+            display: block;
+            // width: 50%;
+        }
+
+        .icon {
+            display: none;
+        }
+    }
+}
+
+@media all and (min-width: 1250px) {
+    .timeline {
+        &__img {
+            display: block;
+            width: 500px;
+            height: 333px;
+        }
+    }
+}

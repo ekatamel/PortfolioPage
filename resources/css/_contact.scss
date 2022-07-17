@@ -1,0 +1,72 @@
+.contact {
+  background-color: $turquoise;
+  color: $white;
+  font-size: 1.2em;
+  font-weight: 300;
+
+  &__title {
+    @include title_format;
+    color: $white;
+  }
+
+  &__container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 1em;
+    column-gap: 2em;
+  }
+
+  &__label {
+    flex-basis: 40%;
+    flex-grow: 1;
+    border-bottom: 1px solid $white;
+    padding-bottom: 0.7em;
+
+    &:last-child {
+      border: none;
+
+      textarea {
+        background-color: $white;
+        width: 100%;
+        resize: none;
+        margin-top: 0.7em;
+        border-radius: 3px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__input {
+    width: 70%;
+    border: none;
+    background-color: $turquoise;
+
+    &:focus {
+      border: none;
+      outline: none;
+      color: white;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  &__button {
+    background-color: $dark_grey;
+    outline: none;
+    border: none;
+    color: $white;
+    padding: 0.7em;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}

@@ -1,0 +1,45 @@
+// INTRODUCTION
+
+.introduction {
+    height: fit-content;
+    padding: 7em 0;
+
+    color: $prussian-blue;
+
+    font-weight: 300;
+
+    &__container {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3em;
+    }
+
+    &__info {
+        text-align: justify;
+    }
+
+    &__title {
+        @include title_format;
+        margin-bottom: 0.7em;
+    }
+
+    &__text {
+        // font-size: 1.8em;
+
+        line-height: 1.5em;
+
+        &--bold {
+            font-weight: 600;
+            color: $steel-blue;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        min-width: 300px;
+    }
+}

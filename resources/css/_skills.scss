@@ -1,0 +1,245 @@
+// SKILLS
+.skills {
+    // background-image: linear-gradient(
+    //     to bottom,
+    //     #ffffff,
+    //     rgba(211, 211, 211, 0.857)
+    // );
+    background-image: linear-gradient(to bottom, #ffffff, #36567362);
+    // background-color: white;
+    @include container;
+    // height: 100vh;
+
+    &__title {
+        @include title_format;
+        // font-family: "Architects Daughter", cursive;
+        color: $steel-blue;
+        // #4b83a6;
+        // height: 10%;
+    }
+
+    &__container {
+        // height: 60vh;
+        min-height: 60vh;
+        width: 80%;
+        margin: 0 auto;
+        // display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2em;
+        // row-gap: 2em;
+        // column-gap: 2em;
+
+        @media (max-width: 839px) {
+            display: none;
+        }
+
+        @media (min-width: 840px) {
+            display: flex;
+        }
+        @media (min-width: 1205px) {
+            &:after {
+                content: "";
+                width: 300px;
+            }
+        }
+        @media (min-width: 1620px) {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__card {
+        // border: 2px solid rgba(0, 0, 0, 0.303);
+        border-radius: 15px;
+        height: 350px;
+        // box-shadow: 8px 8px 5px rgb(169, 168, 168);
+        box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.14),
+            0 3px 10px 8px rgba(0, 0, 0, 0.12),
+            0 17px 8px -7px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        padding: 1.5em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+
+        &:hover {
+            box-shadow: 0 10px 20px 3px rgba(0, 0, 0, 0.14),
+                0 9px 20px 8px rgba(0, 0, 0, 0.12),
+                0 11px 15px -7px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__toolcard {
+        border-radius: 15px;
+        height: 80px;
+        // box-shadow: 10px 10px 10px rgb(169, 168, 168);
+        box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.14),
+            0 3px 10px 8px rgba(0, 0, 0, 0.12),
+            0 17px 8px -7px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        padding: 0 0.9em;
+        display: flex;
+        // column-gap: 1em;
+        align-items: center;
+        background-color: white;
+
+        &:hover {
+            box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+                0 9px 46px 8px rgba(0, 0, 0, 0.12),
+                0 11px 15px -7px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__logo {
+        width: 100px;
+        margin: auto;
+        display: inline-block;
+    }
+
+    &__toollogo {
+        width: 50px;
+    }
+
+    &__name {
+        font-size: 1.3em;
+        width: 70%;
+        font-weight: bold;
+        text-align: center;
+        margin: 0.8em;
+    }
+
+    &__toolname {
+        font-size: 1.3em;
+        width: 70%;
+        // font-weight: bold;
+        text-align: center;
+        margin: 0.8em;
+    }
+
+    &__list {
+        font-size: 1.1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        height: 20;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__item {
+        padding: 5px;
+        transition: all 0.5s ease;
+        // background-color: #97cee97c;
+        // background: linear-gradient(to right, $lightblue, white);
+
+        border: 1px solid rgba(0, 0, 0, 0.303);
+
+        &:hover {
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            background-color: $prussian-blue;
+        }
+    }
+
+    &__filters {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 3em auto;
+        gap: 2em;
+        justify-content: center;
+        font-size: 1.1em;
+    }
+
+    &__filter {
+        padding: 0.6em;
+        font-size: 1.2em;
+        cursor: pointer;
+        // font-weight: 300;
+        background-color: white;
+        border-radius: 50px;
+        // border: 1px solid rgba(0, 0, 0, 0.303);
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.14),
+            0 3px 10px 8px rgba(0, 0, 0, 0.12),
+            0 17px 8px -7px rgba(0, 0, 0, 0.2);
+
+        &--active {
+            color: white;
+            background-color: $prussian-blue;
+        }
+
+        &:hover {
+            color: white;
+            background-color: $prussian-blue;
+        }
+
+        @media all and (max-width: 839px) {
+            width: 140px;
+            font-size: 1em;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__carousel {
+        // width: 80%;
+        // margin: 2em auto;
+        // margin: 0;
+        // padding: 0 2em;
+
+        width: 480px;
+        margin: auto;
+
+        .carousel-container {
+            padding: 2.4em 3.7em;
+            width: 420px;
+            margin: auto;
+        }
+
+        // .react-multi-carousel-item {
+        //   margin-bottom: 1em;
+        // }
+
+        .react-multi-carousel-dot-list {
+            margin-left: 2em;
+        }
+
+        .react-multiple-carousel__arrow--left {
+            margin-left: -1em;
+            &::before {
+                content: url("/img/icons/left-arrow.png");
+                margin-right: 5px;
+                margin-top: 9px;
+            }
+        }
+
+        .react-multiple-carousel__arrow--right {
+            margin-right: -1em;
+            &::before {
+                content: url("/img/icons/right-arrow.png");
+                margin-left: 5px;
+                margin-top: 9px;
+            }
+        }
+
+        @media (max-width: 839px) {
+            display: block;
+        }
+
+        @media (min-width: 840px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// VARIABLES
+
+$white: #ffffff;
+$light_grey: #ebeaea;
+$text_grey: #444444;
+$dark_grey: #232323;
+
+$lightblue: #97cee9;
+$turquoise: #63a5bf;
+$fontain-blue: #4b83a6;
+$steel-blue: #365673;
+$prussian-blue: #222f40;
+$color__main: #afe4ff;
+$color__active: grey;
+$background__active: #eee;
+$width__tabs-side: 250px;
+$breakpoint: 1342px;
+
+@mixin tab-active() {
+    background: $color__main;
+    color: $background__active;
+}
+
+@mixin gray_containers {
+    width: 100%;
+    background-color: $light_grey;
+    height: 8em;
+}
+
+@mixin button {
+    padding: 5px 8px;
+    font: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 1em 0.5em 0;
+
+    transition: tranform 0.2s ease;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@mixin title_format {
+    // font-size: 3.8rem;
+    font-family: "Architects Daughter", sans-serif;
+    text-align: center;
+    margin: 1em 0 1em 0;
+    // padding: 1em 0 1em 0
+}
+
+@mixin container {
+    height: fit-content;
+    padding: 2.5em 0;
+}
